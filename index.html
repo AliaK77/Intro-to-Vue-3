@@ -15,6 +15,9 @@
   <body>
     <div id="app">
       <div class="nav-bar"></div> <!-- end div:nav-bar-->
+
+      <div class="cart">Cart( {{ cart }} )</div>
+
        <div class="product-display">
          <div class="product-container">
           <div class="product-image">
@@ -22,6 +25,34 @@
           </div> <!-- end div:product-image -->
           <div class="product-info">
             <h1>{{ product }}</h1>
+            <p v-if="inStock">in stock (if/else)</p>
+            <p v-else>out of stock</p>
+
+            <p v-show="inStock">in stock (show)</p> <!-- use either v-if/else or v-show for boolan -->
+            <p v-if="inventory > 10">in stock: more than 10</p>
+
+            <p v-else-if="inventory <= 10 && inventory > 0">almost sold out!</p>
+            <p v-else>out of stock</p>
+
+            <p v-show="onSale">be quick, this is on sale!</p>
+            
+            <ul>
+              <li v-for="detail in details">{{ detail }}</li>
+            </ul>
+
+
+            <div v-for="variant in variants">{{ variant.colour }} (full list)</div>
+            
+            <div v-for="variant in variants" :key="variant.id" @mouseover="updateImage(variant.image)">{{ variant.colour }}</div>
+
+
+
+            <button class="button" v-on:click="cart += 1">Add to Cart simple</button>
+
+            <!-- use method for more complex logic for cart handling -->
+            <button class="button" v-on:click="addToCart">add to Cart method</button>
+            <button class="button" @click="removeFromCart">remove from Cart method</button>
+
           </div> <!-- end div:product-info -->
         </div> <!-- end div:product-container -->
       </div> <!-- end div:product-display -->
