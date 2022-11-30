@@ -1,4 +1,4 @@
-const app = Vue.createApp({
+const app = Vue.createApp({ // keep { on this line not newline
         data(){
             return {
                 product: 'Socks and turtles'
