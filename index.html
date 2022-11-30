@@ -14,16 +14,15 @@
   <!-- {{ for vue - JS expression }}-->
   <body>
     <div id="app">
-      <div class="nav-bar"></div> <!-- end div:nav-bar -->
-
-      <div class="product-display">
-        <div class="product-container">
+      <div class="nav-bar"></div> <!-- end div:nav-bar-->
+       <div class="product-display">
+         <div class="product-container">
           <div class="product-image">
-            <img v-bind:src="image">
+            <img :src="image">
           </div> <!-- end div:product-image -->
-          <div class="product-info"
+          <div class="product-info">
             <h1>{{ product }}</h1>
-        </div> <!-- end div:product-info -->
+          </div> <!-- end div:product-info -->
         </div> <!-- end div:product-container -->
       </div> <!-- end div:product-display -->
     </div> <!-- end div:app -->
