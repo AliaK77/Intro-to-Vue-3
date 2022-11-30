@@ -16,11 +16,12 @@ const app = Vue.createApp({ // keep { on this line not newline
         }, // end data()
 
         methods: {
+            // todo : need to handle stock level when ordering
             addToCart() {
                 this.cart += 1
             },
             removeFromCart() {
-                if (this.cart > 0) {
+                if (this.cart > 0) { // check if cart is not already empty
                     this.cart -= 1   
                 } // end if this.cart>0 
                 else {
