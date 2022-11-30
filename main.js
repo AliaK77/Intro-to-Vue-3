@@ -1,7 +1,8 @@
 const app = Vue.createApp({ // keep { on this line not newline
         data(){
             return {
-                product: 'Socks and turtles'
+                product: 'socks and turtles',
+                image: './assets/images/socks_green.jpg'
             } // end return
         } // end data()
 
