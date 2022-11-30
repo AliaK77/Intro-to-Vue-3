@@ -8,4 +8,4 @@ const app = Vue.createApp(
             } // end return
         } // end data()
 
-    }) . // end app createApp
+    })  // end app createApp
