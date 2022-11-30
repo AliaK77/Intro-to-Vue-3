@@ -20,7 +20,12 @@ const app = Vue.createApp({ // keep { on this line not newline
                 this.cart += 1
             },
             removeFromCart() {
-                this.cart -= 1
+                if (this.cart > 0) {
+                    this.cart -= 1   
+                } // end if this.cart>0 
+                else {
+                    this.cart = 0 // cart is already empty, so stop removing
+                }
             },
             updateImage(variantImage) {
                 this.image = variantImage

@@ -46,12 +46,13 @@
             <div v-for="variant in variants" :key="variant.id" @mouseover="updateImage(variant.image)">{{ variant.colour }}</div>
 
 
-
+            <!--
             <button class="button" v-on:click="cart += 1">Add to Cart simple</button>
+            -->
 
             <!-- use method for more complex logic for cart handling -->
-            <button class="button" v-on:click="addToCart">add to Cart method</button>
-            <button class="button" @click="removeFromCart">remove from Cart method</button>
+            <button class="button" v-on:click="addToCart">add to cart</button>
+            <button class="button" @click="removeFromCart">remove from cart</button>
 
           </div> <!-- end div:product-info -->
         </div> <!-- end div:product-container -->
